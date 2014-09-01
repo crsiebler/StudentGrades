@@ -13,6 +13,10 @@ import java.io.Serializable;
  */
 public class Student implements Serializable {
     
+    // Define the Result strings that are reused often
+    private static final String COMMA = ", ";
+    private static final String PERIOD = ".";
+    
     // Declare the Student fields
     private String firstName;
     private String lastName;
@@ -74,6 +78,39 @@ public class Student implements Serializable {
             }
         }
         
+        public Grade getEnum(String input) {
+            switch (input) {
+                case "A+":
+                    return A_PLUS;
+                case "A":
+                    return A;
+                case "A-":
+                    return A_MINUS;
+                case "B+":
+                    return B_PLUS;
+                case "B":
+                    return B;
+                case "B-":
+                    return B_MINUS;
+                case "C+":
+                    return C_PLUS;
+                case "C":
+                    return C;
+                case "C-":
+                    return C_MINUS;
+                case "D+":
+                    return D_PLUS;
+                case "D":
+                    return D;
+                case "D-":
+                    return D_MINUS;
+                case "F":
+                    return F;
+                default:
+                    return null;
+            }
+        }
+        
     }
 
     /**
@@ -98,6 +135,16 @@ public class Student implements Serializable {
         this.ssn = ssn;
         this.className = className;
         this.grade = grade;
+    }
+
+    /**
+     * Return a String representing the class.
+     * 
+     * @return Representation of the Student class
+     */
+    @Override
+    public String toString() {
+        return lastName + COMMA + firstName + COMMA + className + COMMA + grade.toString() + PERIOD;
     }
 
     /**
