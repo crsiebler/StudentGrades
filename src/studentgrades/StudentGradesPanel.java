@@ -278,9 +278,9 @@ class StudentGradesPanel extends JPanel {
             } catch (EOFException ex) {
                 // Reached the EOF as expected
             } catch (ClassNotFoundException ex) {
-                resultsArea.setText("WARNING: Cannot perform input. Class not found.");
+                resultsArea.setText("Class to serial not found.");
             } catch (IOException ex) {
-                resultsArea.setText("WARNING: Cannot loan file");
+                resultsArea.setText("Cannot load file to deserialize");
             }
         }
 
