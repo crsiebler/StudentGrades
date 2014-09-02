@@ -29,7 +29,7 @@ public class StudentGrades {
             // Set Default Dimension, Close Operation, Bounds, and Resizable
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            // Initialize the Panel to perform file searching
+            // Initialize the Panel to perform file serialization
             StudentGradesPanel studentGradesPanel = new StudentGradesPanel();
 
             // Add the panel and set the frame size & visibility
