@@ -183,7 +183,7 @@ class StudentGradesPanel extends JPanel {
      * Listener for the save button. Creates a student grade from the user input
      * and writes the object to a file.
      */
-    public class SaveListener implements ActionListener {
+    private class SaveListener implements ActionListener {
 
         /**
          * Creates the student grade and writes it to the file.
@@ -265,7 +265,7 @@ class StudentGradesPanel extends JPanel {
      * Listener for the load button. Reads the file of serialized student grades
      * and deserializes them into usable object.
      */
-    public class LoadListener implements ActionListener {
+    private class LoadListener implements ActionListener {
 
         /**
          * Loads objects from the file.
