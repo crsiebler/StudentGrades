@@ -2,7 +2,13 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Serialize and Deserialize a file of Student Grade objects.
+//              Utilizes ObjectOutputStream & ObjectInputStream to perform the
+//              tasks. Due to the use of these classes, a list was needed to
+//              track the objects in memory. This is necessary because the file
+//              will be overwritten each time the program writes to the it.
+//              To overcome this problem, the program loads the objects into
+//              memory upon start.
 package studentgrades;
 
 import java.awt.BorderLayout;
@@ -35,6 +41,12 @@ import javax.swing.SpringLayout;
 import studentgrades.Student.Grade;
 
 /**
+ * Serialize and Deserialize a file of Student Grade objects. Utilizes
+ * ObjectOutputStream & ObjectInputStream to perform the tasks. Due to the use
+ * of these classes, a list was needed to track the objects in memory. This is
+ * necessary because the file will be overwritten each time the program writes
+ * to the it. To overcome this problem, the program loads the objects into
+ * memory upon start.
  *
  * @author csiebler
  */
@@ -167,9 +179,14 @@ class StudentGradesPanel extends JPanel {
         add(actionPanel, BorderLayout.SOUTH);
     }
     
+    /**
+     * Listener for the save button. Creates a student grade from the user input
+     * and writes the object to a file.
+     */
     public class SaveListener implements ActionListener {
 
         /**
+         * Creates the student grade and writes it to the file.
          * 
          * @param e 
          */
@@ -245,11 +262,13 @@ class StudentGradesPanel extends JPanel {
     }
     
     /**
-     * 
+     * Listener for the load button. Reads the file of serialized student grades
+     * and deserializes them into usable object.
      */
     public class LoadListener implements ActionListener {
 
         /**
+         * Loads objects from the file.
          * 
          * @param e 
          */

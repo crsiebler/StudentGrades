@@ -2,12 +2,19 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Stores the information required to track the student grades.
+//              Must implement Serializable to store the object into a file.
+//              Utilizes an Enum to represent the letter grade. Also, the SSN
+//              field should not be serialized so it is declared as transient.
 package studentgrades;
 
 import java.io.Serializable;
 
 /**
+ * Stores the information required to track the student grades. Must implement
+ * Serializable to store the object into a file. Utilizes an Enum to represent
+ * the letter grade. Also, the SSN field should not be serialized so it is
+ * declared as transient.
  *
  * @author csiebler
  */

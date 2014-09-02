@@ -2,12 +2,17 @@
 //  Name: Cory Siebler
 //  StudentID: 1000832292
 //  Lecture Topic: CSE 494 @ 7:30 MW
-//  Description: (Description of each file/class)
+//  Description: Loader class for the Student Grades program. This creates the
+//              Frame and the Panel to interface with the user. Makes sure that
+//              the initialize setup of the GUI is thread safe.
 package studentgrades;
 
 import javax.swing.JFrame;
 
 /**
+ * Loader class for the Student Grades program. This creates the Frame and the
+ * Panel to interface with the user. Makes sure that the initialize setup of the
+ * GUI is thread safe.
  *
  * @author csiebler
  */
