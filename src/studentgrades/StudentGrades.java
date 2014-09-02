@@ -24,7 +24,7 @@ public class StudentGrades {
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(() -> {
             // Initialize JFrame & Dimensions
-            JFrame frame = new JFrame("CSE 494 - File Scanner");
+            JFrame frame = new JFrame("CSE 494 - Student Grades");
 
             // Set Default Dimension, Close Operation, Bounds, and Resizable
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
